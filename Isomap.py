@@ -116,13 +116,13 @@ if __name__ == '__main__':
         
     for o in optlist:
         if o[0].strip('-') == 'help' or o[1].strip('-') == 'h':
-            print "The following commands are available:"
-            print "\t--if=inputfile\tDefaults to swissroll.csv"
-            print "\t--of=outputfile\tDefaults to embedding.csv"
-            print "\t--k=k_nearest_neighbours\tDefaults to 12"
-            print "\t--outdims=embedding_dimensions\tDefaults to 3"
-            print "\t--indims=input_dimensions\tDefaults to all in the input file"
-            print "\t--nonmetric\tEnables non-metric MDS embeddings"
+            print ("The following commands are available:")
+            print ("\t--if=inputfile\tDefaults to swissroll.csv")
+            print ("\t--of=outputfile\tDefaults to embedding.csv")
+            print ("\t--k=k_nearest_neighbours\tDefaults to 12")
+            print ("\t--outdims=embedding_dimensions\tDefaults to 3")
+            print ("\t--indims=input_dimensions\tDefaults to all in the input file")
+            print ("\t--nonmetric\tEnables non-metric MDS embeddings")
     result = None
     if not nonmetric:
         result = Isomap(infile,outfile,srcDims,trgDims,k,eps,False)
